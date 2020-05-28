@@ -1,0 +1,13 @@
+<?php
+  $conn=new mysqli("localhost","root","dophp7");
+    if($conn->conncect_error){
+  	echo "Error:".$conn->connect_error;
+}
+  $stmt=$conn->prepare("INSERT INTO tb_usuarios (deslogin,dessenha) VALUES (?,?)");
+  $stmt->bind_param("as",$login,$pass);
+  $login="user";
+  $pass="12345";
+  $stmt->execute();
+  $login="root";
+  $pass="!@#$";
+?>
