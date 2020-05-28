@@ -1,6 +1,6 @@
 <?php
-  $conn=new mysqli("localhost","root","dophp7");
-    if($conn->conncect_error){
+  $conn=new mysqli("localhost","root","dophp7"); //conectando no banco de dados
+    if($conn->conncect_error){     //verificando se ha algum erro
   	echo "Error:".$conn->connect_error;
 }
   $stmt=$conn->prepare("INSERT INTO tb_usuarios (deslogin,dessenha) VALUES (?,?)");
