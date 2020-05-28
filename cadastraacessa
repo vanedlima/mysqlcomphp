@@ -1,7 +1,7 @@
 <?php
   $conn=new mysqli("localhost","root","dophp7"); //conectando no banco de dados //
     if($conn->conncect_error){     //verificando se ha algum erro //
-  	echo "Error:".$conn->connect_error;
+  	echo "Error:".$conn->connect_error;  //verificando se ha algum erro //
 }
   $stmt=$conn->prepare("INSERT INTO tb_usuarios (deslogin,dessenha) VALUES (?,?)");
   $stmt->bind_param("as",$login,$pass);
