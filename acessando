@@ -10,4 +10,5 @@
   $stmt->execute();
   $login="root";
   $pass="!@#$";
+  $stmt->execute();
 ?>
